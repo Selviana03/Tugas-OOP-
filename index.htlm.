@@ -1,39 +1,92 @@
-// Nama: Serlin Selviana Giay
-// NIM: 251410030
-// Tugas: Pemrograman Berorientasi Objek
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas OOP Dart - Serlin Selviana Giay</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #880e4f;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-// 1. Membuat Class Hewan sesuai permintaan soal No. 3
-class Hewan {
-  // Atribut: nama
-  String nama;
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(236, 64, 122, 0.2);
+            border: 2px solid #f8bbd0;
+        }
 
-  // Konstruktor: Untuk mengisi nama saat objek dibuat
-  Hewan(this.nama);
+        h1 { color: #ad1457; text-align: center; border-bottom: 2px solid #f8bbd0; padding-bottom: 10px; }
+        
+        .identity { margin-bottom: 20px; font-weight: bold; }
+        .identity span { color: #ec407a; }
 
-  // Metode: bersuara()
-  void bersuara() {
-    print('Hewan $nama sedang bersuara: Meow... Guk... Rauurrr!');
+        pre {
+            background-color: #2d2d2d; /* Warna gelap agar kode Dart terlihat profesional */
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-family: 'Consolas', monospace;
+            line-height: 1.5;
+        }
+
+        /* Highlight warna pink untuk beberapa bagian kode */
+        .kwd { color: #ff79c6; } /* keyword */
+        .typ { color: #8be9fd; } /* type */
+        .str { color: #f1fa8c; } /* string */
+        .cmt { color: #6272a4; font-style: italic; } /* comment */
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Tugas Pemrograman Berorientasi Objek</h1>
+        
+        <div class="identity">
+            <p>Nama: <span>Serlin Selviana Giay</span></p>
+            <p>NIM: <span>251410030</span></p>
+            <p>Bahasa: <span>Dart</span></p>
+        </div>
+
+        <h3>Jawaban Soal No. 3:</h3>
+        <p>Membuat Class <b>Hewan</b> dengan atribut <b>nama</b> dan metode <b>bersuara()</b>.</p>
+
+        <pre>
+<span class="cmt">// Definisi Class Hewan dalam Dart</span>
+<span class="kwd">class</span> <span class="typ">Hewan</span> {
+  <span class="cmt">// Atribut</span>
+  <span class="typ">String</span> nama;
+
+  <span class="cmt">// Konstruktor</span>
+  <span class="typ">Hewan</span>(<span class="kwd">this</span>.nama);
+
+  <span class="cmt">// Metode</span>
+  <span class="kwd">void</span> <span class="met">bersuara</span>() {
+    print(<span class="str">"$nama sedang bersuara: Rauuurrr!"</span>);
   }
 }
 
-void main() {
-  print('--- Tugas OOP Dart - Serlin Selviana Giay ---');
+<span class="kwd">void</span> <span class="met">main</span>() {
+  <span class="cmt">// Membuat Objek dari Class Hewan</span>
+  <span class="kwd">var</span> kucing = <span class="typ">Hewan</span>(<span class="str">"Kucing"</span>);
   
-  // 2. Membuat Objek dari Class Hewan
-  // Kita beri nama objeknya 'kucing'
-  var kucing = Hewan('Kucing');
-  
-  // 3. Menampilkan Nama (Atribut)
-  print('Nama Objek: ${kucing.nama}');
-  
-  // 4. Memanggil Metode bersuara
+  <span class="cmt">// Mengakses Atribut dan Metode</span>
+  print(<span class="str">"Nama Hewan: ${kucing.nama}"</span>);
   kucing.bersuara();
-  
-  print('-------------------------------------------');
-  
-  // Contoh objek lain
-  var singa = Hewan('Singa');
-  print('Nama Objek: ${singa.nama}');
-  singa.bersuara();
-}
-        
+}</pre>
+    </div>
+
+    <p style="margin-top: 20px; color: #f06292;">&copy; 2026 Serlin Selviana Giay</p>
+
+</body>
+</html>
