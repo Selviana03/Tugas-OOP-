@@ -1,151 +1,39 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas OOP - Serlin Selviana Giay</title>
-    <style>
-        body {
-            background-color: #ffebee; /* Latar belakang pink sangat muda */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #880e4f;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+// Nama: Serlin Selviana Giay
+// NIM: 251410030
+// Tugas: Pemrograman Berorientasi Objek
 
-        .header-card {
-            background-color: #ad1457;
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 800px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
+// 1. Membuat Class Hewan sesuai permintaan soal No. 3
+class Hewan {
+  // Atribut: nama
+  String nama;
 
-        .content-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 800px;
-            box-shadow: 0 10px 25px rgba(216, 27, 96, 0.1);
-            border: 1px solid #f8bbd0;
-        }
+  // Konstruktor: Untuk mengisi nama saat objek dibuat
+  Hewan(this.nama);
 
-        h2 {
-            color: #c2185b;
-            border-bottom: 2px solid #f8bbd0;
-            padding-bottom: 10px;
-        }
-
-        .info-table {
-            width: 100%;
-            margin-bottom: 20px;
-            border-collapse: collapse;
-        }
-
-        .info-table td {
-            padding: 8px;
-            vertical-align: top;
-        }
-
-        .label {
-            font-weight: bold;
-            width: 150px;
-            color: #ad1457;
-        }
-
-        pre {
-            background-color: #fff5f8;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 5px solid #ec407a;
-            overflow-x: auto;
-            font-family: 'Consolas', 'Monaco', monospace;
-            font-size: 14px;
-            line-height: 1.5;
-            color: #333;
-        }
-
-        /* Syntax Coloring */
-        .kwd { color: #ad1457; font-weight: bold; } /* Keywords */
-        .cls { color: #ec407a; font-weight: bold; } /* Classes */
-        .str { color: #d81b60; } /* Strings */
-        .cmt { color: #f48fb1; font-style: italic; } /* Comments */
-        .met { color: #f06292; } /* Methods */
-
-        footer {
-            margin-top: 30px;
-            color: #f06292;
-            font-size: 12px;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="header-card">
-        <h1>TUGAS PEMROGRAMAN BERORIENTASI OBJEK</h1>
-        <p>Pertemuan 1 - Konsep Dasar Class & Object</p>
-    </div>
-
-    <div class="content-card">
-        <h2>Identitas Mahasiswa</h2>
-        <table class="info-table">
-            <tr>
-                <td class="label">Nama Lengkap</td>
-                <td>: Serlin Selviana Giay</td>
-            </tr>
-            <tr>
-                <td class="label">NIM</td>
-                <td>: 251410030</td>
-            </tr>
-            <tr>
-                <td class="label">Mata Kuliah</td>
-                <td>: Pemrograman Berorientasi Objek (OOP)</td>
-            </tr>
-        </table>
-
-        <h2>Jawaban Tugas No. 3</h2>
-        <p>Berikut adalah implementasi Class <b>Hewan</b> dengan atribut <b>nama</b> dan metode <b>bersuara()</b> dalam bahasa Java:</p>
-        
-        <pre>
-<span class="cmt">// Program sederhana OOP Java</span>
-<span class="kwd">class</span> <span class="cls">Hewan</span> {
-    <span class="cmt">// Atribut</span>
-    <span class="kwd">String</span> nama;
-
-    <span class="cmt">// Konstruktor</span>
-    <span class="kwd">public</span> <span class="cls">Hewan</span>(<span class="kwd">String</span> namaAwal) {
-        <span class="kwd">this</span>.nama = namaAwal;
-    }
-
-    <span class="cmt">// Metode</span>
-    <span class="kwd">public void</span> <span class="met">bersuara</span>() {
-        System.out.println(<span class="str">"Hewan "</span> + nama + <span class="str">" sedang mengeluarkan suara..."</span>);
-    }
+  // Metode: bersuara()
+  void bersuara() {
+    print('Hewan $nama sedang bersuara: Meow... Guk... Rauurrr!');
+  }
 }
 
-<span class="kwd">public class</span> <span class="cls">Main</span> {
-    <span class="kwd">public static void</span> <span class="met">main</span>(<span class="kwd">String</span>[] args) {
-        <span class="cmt">// Membuat Objek</span>
-        <span class="cls">Hewan</span> kucing = <span class="kwd">new</span> <span class="cls">Hewan</span>(<span class="str">"Kucing"</span>);
+void main() {
+  print('--- Tugas OOP Dart - Serlin Selviana Giay ---');
+  
+  // 2. Membuat Objek dari Class Hewan
+  // Kita beri nama objeknya 'kucing'
+  var kucing = Hewan('Kucing');
+  
+  // 3. Menampilkan Nama (Atribut)
+  print('Nama Objek: ${kucing.nama}');
+  
+  // 4. Memanggil Metode bersuara
+  kucing.bersuara();
+  
+  print('-------------------------------------------');
+  
+  // Contoh objek lain
+  var singa = Hewan('Singa');
+  print('Nama Objek: ${singa.nama}');
+  singa.bersuara();
+}
         
-        <span class="cmt">// Menampilkan Nama dan Memanggil Metode</span>
-        System.out.println(<span class="str">"Nama Objek: "</span> + kucing.nama);
-        kucing.<span class="met">bersuara</span>();
-    }
-}</pre>
-    </div>
-
-    <footer>
-        &copy; 2024 Serlin Selviana Giay - Dibuat dengan GitHub Pages
-    </footer>
-
-</body>
-</html>
